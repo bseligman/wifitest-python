@@ -3,8 +3,9 @@
 
 ### IMPORTS
 from password_functions.gen_pas import generatepass
-from am_random import mrandom
-from random_check import RCheck
+from am_random import random as ran
+from random_check import RCheck as rcheck
 
 ### MAIN
-print(mrandom())
+print(rcheck())
+print(ran())

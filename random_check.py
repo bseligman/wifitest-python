@@ -7,6 +7,7 @@ from am_random import random
 ### MAIN
 def RCheck():
     ### VARS
+    RZERO = 0
     RONE = 0
     RTWO = 0
     RTHREE = 0
@@ -19,6 +20,8 @@ def RCheck():
 
     for i in range(0, 100, 1):
         RAN = random()
+        if(RAN == 1):
+            RZERO+= 1
         if(RAN == 1):
             RONE+= 1
         if(RAN == 2):
@@ -37,7 +40,17 @@ def RCheck():
             REIGHT+= 1
         if(RAN == 9):
             RNINE+= 1
-
     # Print Results
     print("-Test of Randomness in base 10-")
-    print("1 = " + str(RONE/100) + "%")
+    print("0 = " + str(RZERO) + "%")
+    print("1 = " + str(RONE) + "%")
+    print("2 = " + str(RTWO) + "%")
+    print("3 = " + str(RTHREE) + "%")
+    print("4 = " + str(RFOUR) + "%")
+    print("5 = " + str(RFIVE) + "%")
+    print("6 = " + str(RSIX) + "%")
+    print("7 = " + str(RSEVEN) + "%")
+    print("8 = " + str(REIGHT) + "%")
+    print("9 = " + str(RNINE) + "%")
+    #just so returned shows as ' ' rathere then 'none'
+    return ''

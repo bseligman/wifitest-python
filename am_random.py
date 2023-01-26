@@ -7,31 +7,19 @@ from math import ceil
 
 ### MAIN
 def random():
-    first = mrandom()
-    second = mrandom()
-    third = mrandom()
-
-    return (first + second - third)
-
-def mrandom():
     # Two almost same values
-    t_create = time.localtime()
-    """
+    t_create = time.time_ns()
     result = ""
-    i_create = time()
 
     # Add em
-    t_create = t_create + i_create
-
-    # Divide with new given
-    t_create = t_create / (time() * 2)
+    t_create = t_create + time.time_ns()
 
     # Mod it
-    t_create = t_create % time()
+    t_create = t_create % time.time_ns()
 
+    # Convert to string
     result = str(t_create)
-    print(result)
+    # Get last number of the long number lmao
     result = int(result[len(result) - 1])
-    """
 
-    return print( (t_create.tm_mon * st_create.tm_sec) % t_create.tm_sec)
+    return result
